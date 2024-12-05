@@ -21,10 +21,14 @@ fetch('https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.g
         let pHeader = document.createElement("p");
         pHeader.textContent = data.propositionDeValeur;
         divHeader.appendChild(pHeader);
+        //Création de l'ancre du bouton "demander un devis"
+        let aBtn = document.createElement("a");
+        aBtn.href = "#realisations";
+        divHeader.appendChild(aBtn);
         //création du bouton dans le header
         let btnHeader = document.createElement("button");
         btnHeader.textContent = data.texteBouton;
-        divHeader.appendChild(btnHeader);
+        aBtn.appendChild(btnHeader);
 
         //Création promesses clients
         let promesses = document.getElementById("promesses");
@@ -32,17 +36,25 @@ fetch('https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.g
         divProm.className = "prom-container";
         promesses.appendChild(divProm);
 
+        let h2Prom = document.createElement("h2");
+        h2Prom.textContent = "Pourquoi nous choisir";
+        divProm.appendChild(h2Prom);
+
         //Création image promesses clients
-        let imgProm = document.createElement("img")
-        promesses.appendChild(imgProm)
+        let imgProm = document.createElement("img");
+        imgProm.src = "https://cdn.pixabay.com/photo/2016/06/03/15/35/customer-service-1433639_1280.png"
+        promesses.appendChild(imgProm);
         
         //Création d'une boucle forEach pour les promesses clients
         data.promessesClients.forEach(element => {
+            let divPromCont = document.createElement("div");
+            divProm.appendChild(divPromCont) ;           
             let i = document.createElement("i");
-            divProm.appendChild(i);
-            let pProm = document.createElement("p")
+            i.className = "fa-regular fa-circle-check"
+            divPromCont.appendChild(i);
+            let pProm = document.createElement("p");
             pProm.textContent = element;
-            divProm.appendChild(pProm)
+            divPromCont.appendChild(pProm)
             });
         
         //Création de div réalisation

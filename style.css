@@ -1,1 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*selection de toute la page pour style*/
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/*intégration image pour le header*/
+header {
+    height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2019/02/23/07/21/carpenter-4015109_1280.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+/*style barre de navigation*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c6b8a3;
+    height: 50px;
+}
+
+/*liste dans la barre de navigation*/
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*style des listes sans puces*/
+li {
+    list-style: none;
+}
+
+/*style Liens dans la nav*/
+nav a {
+    padding-right: 30px;
+    color: white;
+    font-size: .8em;
+    text-decoration: none;
+}
+
+/*style de "Menuiserie" et contour de logo*/
+h4 {
+    color: white;
+    font-weight: 400;
+    padding: 5px;
+    margin-left: 30px;
+    border: 2px solid;
+}
+
+/*style de "Bobois"*/
+h4 span {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #523812;
+}
+
+/*style class hero-content représente header*/
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.107);
+    align-self: center;
+    margin-top: 80px;
+    backdrop-filter: blur(5px);
+}
+
+/*style */
+h1{
+    margin-bottom: 60px;
+    font-size: 3em;
+}
+
+/*style du bouton "Demander un devis"*/
+button {
+    margin-top: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*style class promessesClients*/
+.promesses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+/*taille image promessesClients*/
+.promesses img {
+    width: 20%;
+}
+
+/*espace icône promessesClients*/
+.promesses i {
+    padding-right: 10px;
+}
+
+/*on cible div dans container*/
+.prom-container div {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 600px;
+    padding-top: 20px;
+}
