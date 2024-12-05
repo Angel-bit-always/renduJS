@@ -43,6 +43,9 @@ nav a {
     color: white;
     font-size: .8em;
     text-decoration: none;
+    /*position:fixed;
+    width: 100%;*/
+
 }
 
 /*style de "Menuiserie" et contour de logo*/
@@ -75,7 +78,7 @@ h4 span {
     backdrop-filter: blur(5px);
 }
 
-/*style */
+/*style h1*/
 h1{
     margin-bottom: 60px;
     font-size: 3em;
@@ -113,4 +116,73 @@ button {
     height: 50px;
     width: 600px;
     padding-top: 20px;
+}
+
+/*style de la class realisation*/
+.realisations h2 {
+    padding-left: 60px;
+}
+.realisations-container {
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+/*style du container "realisations" */
+.real-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: 650px;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/*espace dans les réalisations titres*/
+.real-content {
+    padding-top: 20px;
+}
+
+/*espace dans les réalisations paragraphes*/
+.real-content p {
+    padding-top: 10px;
+}
+
+/*style de la section rubrique temoignages*/
+.temoignages {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+/*style des temoignages*/ 
+.tem-content {
+    width: 800px;
+    padding: 20px 30px;
+    margin: 20px 0;
+    background-color: #b3976d;
+    text-align: center;
+}
+
+/*style du footer*/ 
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+    background-color: #c6b8a3;
+    color: white;
+    margin-top: 40px;
+}
+
+/*style des icônes dans le footer*/ 
+footer ul {
+    display:flex
+}
+
+footer a {
+    padding-right: 10px;
+    color:white;
 }

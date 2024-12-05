@@ -59,12 +59,19 @@ fetch('https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.g
         
         //Création de div réalisation
         let real = document.getElementById("realisations");
-        let divReal = document.createElement("div");
-        divReal.className = "real-container";
-        real.appendChild(divReal);
+        let h2Real = document.createElement("h2");
+        h2Real.textContent = "Nos réalisations";
+        real.appendChild(h2Real);
+        let divRealContainer = document.createElement("div");
+        divRealContainer.className = "realisations-container"
+        real.appendChild(divRealContainer);
         
         //Création de l'image, divRealCont, h2, pReal dans div réalisation avec une boucle forEach
         data.realisations.forEach(element => {
+            let divReal = document.createElement("div");
+            divReal.className = "real-container";
+            divRealContainer.appendChild(divReal);
+
             let img = document.createElement("img");
             img.src = element["image-url"];
             divReal.appendChild(img);
@@ -82,20 +89,28 @@ fetch('https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.g
             pReal.textContent = element.description;
             divRealCont.appendChild(pReal);
         });   
-    
+        
+        //Création de h2Tem et divTemContainer pour le container et le titre temoignages
+        let temoin = document.getElementById("temoignages");
+        let h2Tem = document.createElement("h2");
+        h2Tem.textContent = "Avis de nos clients";
+        temoin.appendChild(h2Tem);
+        let divTemContainer = document.createElement("div");
+        divTemContainer.className = "tem-container"
+        temoin.appendChild(divTemContainer);
+
         //Création de divTem, h3, pNote, pCom, pNom dans temoignages avec une boucle forEach
         data.temoignages.forEach(element => {
-            let temoin = document.getElementById("temoignages");
             let divTem = document.createElement("div");
             divTem.className = "tem-content";
-            temoin.appendChild(divTem);
+            divTemContainer.appendChild(divTem);
 
             let h3 = document.createElement("h3");
             h3.textContent = element.typePrestation;
             divTem.appendChild(h3);
 
             let pNote = document.createElement("p");
-            pNote.textContent = element.note;
+            pNote.textContent = "note : " + element.note + "/5";
             divTem.appendChild(pNote);
 
             let pCom = document.createElement("p");
